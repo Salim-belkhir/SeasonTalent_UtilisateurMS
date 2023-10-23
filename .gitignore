@@ -33,7 +33,7 @@ build/
 .vscode/
 
 ### Docker Volumes ###
-utilisateur_db
+utilisateurstorage
 
 ### Environment ###
 .env

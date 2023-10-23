@@ -1,19 +1,21 @@
 services:
-  utilisateur_db:
+  utilisateurdb:
+    container_name: Utilisateur-Database
     image: 'postgres:latest'
     environment:
-      - 'POSTGRES_DB=Utilisateur_db'
+      - 'POSTGRES_DB=${UTILISATEUR_DB_NAME}'
     env_file: .env
     ports:
       - '${UTILISATEUR_DB_PORT}'
-    # volumes:
-    #   - utilisateur_db:/data/postgres
+    volumes:
+      - ./utilisateurstorage:/data/postgres
 
-  utilisateur_ms:
-    image: 'utilisateur_ms:latest'
+  utilisateurms:
+    container_name: Utilisateur-MS
     build: 
       context: .
       dockerfile: Dockerfile
+    image: 'utilisateurms:latest'
     env_file: .env
     ports:
       - '${SPRING_UTILISATEUR_PORT}:${SPRING_UTILISATEUR_PORT}'
