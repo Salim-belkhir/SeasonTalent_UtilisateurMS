@@ -31,4 +31,28 @@ public class Abonnement {
     private TypeAbonnement typeAbonnement;
 
     private String duree;
+
+    public Long getIdAbonnement() {
+        return idAbonnement;
+    }
+
+    public void setIdAbonnement(Long idAbonnement) {
+        this.idAbonnement = idAbonnement;
+    }
+
+    public TypeAbonnement getTypeAbonnement() {
+        return typeAbonnement;
+    }
+
+    public void setTypeAbonnement(TypeAbonnement typeAbonnement) {
+        this.typeAbonnement = typeAbonnement;
+    }
+
+    public String getDuree() {
+        return duree;
+    }
+
+    public void setDuree(String duree) {
+        this.duree = duree;
+    }
 }
