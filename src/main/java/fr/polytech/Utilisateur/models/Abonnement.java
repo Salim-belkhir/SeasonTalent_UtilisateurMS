@@ -2,6 +2,8 @@ package fr.polytech.Utilisateur.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,7 +26,9 @@ public class Abonnement {
     @SequenceGenerator(name = "abonnement_id_seq", sequenceName = "abonnement_id_seq", allocationSize = 1)
     private Long idAbonnement;
 
-    private String nomAbonnement;
+    @ManyToOne
+    @JoinColumn(name = "idTypeAbonnement")
+    private TypeAbonnement typeAbonnement;
 
     private String duree;
 }
