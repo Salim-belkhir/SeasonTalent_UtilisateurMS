@@ -34,6 +34,7 @@ build/
 
 ### Docker Volumes ###
 utilisateurstorage
+db_utilisateur_init
 
 ### Environment ###
 .env
